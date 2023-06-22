@@ -1,5 +1,7 @@
 import { Link } from "@next/Link";
 import Image from 'next/image';
+import { ArrowRight } from 'react-bootstrap-icons'
+import Carousel from 'react-bootstrap/Carousel'
 export default function Homepage() {
     return (
         <div>
@@ -177,8 +179,122 @@ export default function Homepage() {
                     <Image className="avater-image" src = "../../public/avater.png" width={ 20} height={ 20} alt="avater"/>
             </div>
             {/* our team */}
-            
-
+            <div className='meet our teams'>
+                <h2>Meet the teeam</h2>
+                <div className="carousel-ceo">
+                <Carousel>
+                    <Carousel.item>
+                            <Image  className = 'd-block w-100'src={'../../public/team/ceo.png' width={20} height={20} alt="ceo-image" } />
+                        </Carousel.item>
+                        <Carousel.caption>
+                            <h3> More About our C.E.0</h3>
+                            <p> Our ceo has been the inspiration ;<i ><ArrowRight/></i> </p>
+                        </Carousel.caption>
+                </Carousel>
+                </div>
+                <div className="carousel-cto">
+                    <Carousel>
+                        <Carousel.item>
+                            <Image  className = 'd-block w-100'src={'../../public/team/cto.png' width={20} height={20} alt="cto-image" } />
+                        </Carousel.item>
+                        <Carousel.caption>
+                            <h3> More About our C.T.O</h3>
+                            <p> Meet our CTO an amaizing leader;<i ><ArrowRight/></i> </p>
+                        </Carousel.caption>
+                    </Carousel>
+                </div>
+                <div className="carousel-engineering lead">
+                    <Carousel>
+                        <Carousel.item>
+                            <Image  className = 'd-block w-100'src={'../../public/team/engineering.png' width={20} height={20} alt="engineer-image" } />
+                        </Carousel.item>
+                        <Carousel.caption>
+                            <h3> More About our Engineering lead</h3>
+                            <p> Our engineering manager ensures team success;<i ><ArrowRight /></i> </p>
+                        </Carousel.caption>
+                    </Carousel>
+                </div>
+                <div className="carousel-marketing">
+                    <Carousel>
+                        <Carousel.item>
+                            <Image  className = 'd-block w-100'src={'../../public/team/marketing.png' width={20} height={20} alt="marketing-image" } />
+                        </Carousel.item>
+                        <Carousel.caption>
+                            <h3> More About our Marketing team</h3>
+                            <p> Our marketing professional are the face of the company<i ><ArrowRight /></i> </p>
+                        </Carousel.caption>
+                    </Carousel>
+                </div>
+                <div className="carousel-customer-sucess">
+                    <Carousel>
+                        <Carousel.item>
+                            <Image  className = 'd-block w-100'src={'../../public/team/customer-sucess.png' width={20} height={20} alt="marketing-image" } />
+                        </Carousel.item>
+                        <Carousel.caption>
+                            <h3> More About our Customer Success team</h3>
+                            <p> Our customer success team , they ensure each customer is satisfied<i ><ArrowRight /></i> </p>
+                        </Carousel.caption>
+                    </Carousel>
+                </div>
+            </div>
+            {/* faq section */}
+            <div className="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div className="faq-section-content">
+                    <div className="faq-section-content-title">
+                        <h3>Which services does bentexstudiosio offer?</h3>
+                    </div>
+                    <div className="faq-section-content-content">
+                        <p>
+                            We offer a wide range of IT solutions that are tailored to your business unique needs and budget,from cloud computing, mobile development, web development, software development and more
+                            also custom software intergration and payment systems intergration on top of Enterprise resource software
+                        </p>
+                    </div>
+                    <div className="faq-section-content-title">
+                        <h3>Which IT solution is for my business?</h3>
+                    </div>
+                    <div className="faq-section-content-content">
+                        <p>
+                            We offer custom services based on your specific company needs.Find more about our services
+                            <Link to="/services">here</Link>
+                        </p>
+                    </div>
+                    <div className="faq-section-content-title">
+                        <h3>How much does it cost?</h3>
+                        <div className="faq-section-content-content">
+                            <p>
+                                our pricing varies based on the specific services and needs of your business,we offer flexible 
+                                pricing options to suit your budget and requiremets, we struggle to provide clear an consice answers
+                                so that our clients have seemless experience <Link to="/pricing">here</Link>
+                            </p>
+                        </div>
+                    </div>
+                        <div className="faq-section-content-title">
+                            <h3>How do i get started with the solutions?</h3>
+                        
+                        <div className="faq-section-content-content">
+                            <p>
+                                we offer a free 30 minute consultation to help you determine the best solution for your business
+                                Get started here <Link to="/get-started"><ArrowRight /></Link>
+                            </p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            {/* FOOTER SECTION */}
+            <footer>
+                <div className="footer-content">
+                    <div className="footer-content-title">
+                        <h3>Bentexstudiosio</h3>
+                    </div>
+                    <div className="footer-content-content">
+                        <p>
+                            Bentexstudiosio is a full-service IT solutions provider, we offer a wide range of IT solutions that are tailored to your business unique needs and budget,from cloud computing, mobile development, web development, software development and more
+                            also custom software intergration and payment systems intergration on top of Enterprise resource software
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
